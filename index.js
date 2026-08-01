@@ -1,11 +1,28 @@
-import 'dotenv/config'; //It loads the .env file.
-import OpenAI from "openai"; // Importing OpenAI
+import 'dotenv/config'; // Loads the .env file
+import Groq from "groq-sdk"; // Importing Groq
 
-// Initialize the OpenAI instance by securely passing the configuration object
-const openai = new OpenAI()
+// Initialize Groq. Automatically searches environment for credentials
+const groq = new Groq();
 
-// When left empty, it automatically searches the environment for credentials
+console.log("Groq Instance successfully created!");
 
+async function hello() { // Async - tells that the function is capable of pausing at specific points.
+    try {
+        const completion = await groq.chat.completions.create({ // Await refers the specific points at which async function pauses.
+            // Groq requires an open-source model name specified here
+            model: "llama-3.3-70b-versatile", 
+            messages: [
+                { role: "system", content: "You are a good robotic assistant" },
+                { role: "user", content: "Who is JSON" }, 
+                ]
+        });
 
-// To check if it initialized, log the instance correctly
-console.log("OpenAI Instance successfully created!");
+        // Log the response data to the console
+        console.log("AI Response:", completion.choices[0].message.content);
+    } catch (error) {
+        console.error("Error running script:", error);
+    }
+}
+
+hello();
+
