@@ -24,5 +24,5 @@ async function hello() { // Async - tells that the function is capable of pausin
     }
 }
 
-hello();
+hello(); //Calling the function
 
