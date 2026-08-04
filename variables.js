@@ -6,3 +6,13 @@ age = 21;                  // works
 const arr = [1, 2, 3];
 arr.push(4);  
 console.log(arr)
+
+//Pre increment and Post increment
+let x = 5;
+let a = ++x;   // x becomes 6 first, a = 6 --- PRE INCREMENT
+let y = 5;
+let b = y++;   // b = 5 (old value assigned), then y becomes 6  -- POST INCREMENT
+
+let arr2 = ["a", "b", "c"];
+let i = 0;
+console.log(arr2[i++]); // prints "a" first as initial i value is zero, then i becomes 1 , hence operation then increment is Post Increment
