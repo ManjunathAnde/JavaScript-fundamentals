@@ -16,3 +16,19 @@ let b = y++;   // b = 5 (old value assigned), then y becomes 6  -- POST INCREMEN
 let arr2 = ["a", "b", "c"];
 let i = 0;
 console.log(arr2[i++]); // prints "a" first as initial i value is zero, then i becomes 1 , hence operation then increment is Post Increment
+
+
+// Functions and scope
+
+// let/const are scoped to the nearest { } block, not just the function
+function outer() {
+  let count = 0;
+  {
+    let count = 100;   // separate variable, SHADOWS the outer one
+    console.log(count); // 100 -- The scope of this 'let' variable is restricted to the inner block only 
+  }
+  console.log(count);   // 0, outer untouched
+}
+
+
+
