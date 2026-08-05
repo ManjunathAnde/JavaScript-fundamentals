@@ -38,4 +38,7 @@ function outer() {
 console.log("5" + 3);  // "53" + means concatenation if a string is involved
 console.log("5" - 3);  // 2    -> - forces both sides to numbers, no string meaning
 
+// == AND ===
 
+console.log(1 == "1");   // true because it converts types before comparing (coercion)
+console.log(1 === "1");  // false, stricter comparison, no conversion, different types = not equal
