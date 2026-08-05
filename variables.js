@@ -32,3 +32,10 @@ function outer() {
 
 // var leaks values and does not respect scope. Hence it is avoided in functions. 
 
+
+// Type conversion
+
+console.log("5" + 3);  // "53" + means concatenation if a string is involved
+console.log("5" - 3);  // 2    -> - forces both sides to numbers, no string meaning
+
+
