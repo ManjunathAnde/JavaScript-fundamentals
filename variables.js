@@ -30,5 +30,5 @@ function outer() {
   console.log(count);   // 0, outer untouched
 }
 
-
+// var leaks values and does not respect scope. Hence it is avoided in functions. 
 
