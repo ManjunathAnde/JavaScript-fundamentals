@@ -9,3 +9,15 @@
 // - NOT the whole program
 // - code OUTSIDE that function runs unaffected
 
+async function getWeather(latitude, longitude) {  // The execution pauses at 'await' and code after it, in async block, resumes after 'await' call is done executing.
+  const response = await fetch(
+    `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
+  );
+  const data = await response.json(); //This block is pauses until API response is fetched
+  return data.current_weather;
+}
+
+
+
+
+
