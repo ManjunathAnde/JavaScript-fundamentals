@@ -17,6 +17,14 @@ async function getWeather(latitude, longitude) {  // The execution pauses at 'aw
   return data.current_weather;
 }
 
+async function main() {
+  console.log("Fetching weather of Hyderabad");
+  const weather = await getWeather(17.385, 78.4867);
+  console.log(weather);
+}
+
+main();
+
 
 
 
