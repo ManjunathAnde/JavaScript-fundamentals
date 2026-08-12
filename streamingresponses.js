@@ -8,3 +8,6 @@ for await (const chunk of stream) {  // printing the content using for await loo
   process.stdout.write(chunk.choices[0].delta.content || "");
 }
 
+// process.stdout.write = no auto newline, so chunks stitch together smoothly
+// for await...of = needed because normal for loop expects to loop over something already in memory
+// It cannont handle waiting and looping over responses as they come in
