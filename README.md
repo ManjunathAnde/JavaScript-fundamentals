@@ -10,8 +10,8 @@ A structured collection of practical code examples and notes documenting my Java
 * `conditionals.js` – Control flow using `if`, `else if`, `else`, and `switch` statements.
 * `ternary.js` – Concise conditional operations using ternary operators.
 * `loops.js` – Iteration techniques (`for`, `while`, `for...of`, `for...in`).
-* `errorhandling.js` – Managing exceptions with `try`, `catch`, `finally`, and custom errors.
-* `async.js` – Asynchronous patterns, Promises, and `async`/`await`.
+* `errorhandling.js` – Managing exceptions and error handling
+* `async.js` – Asynchronous patterns and `async`/`await`.
 * `streamingresponses.js` – Handling readable streams and chunked data transfers.
 
 ---
